@@ -10,12 +10,12 @@ public class Cita {
     private TipoServicio tipoServicio;
     private boolean confirmada;
 
-    public Cita(LocalDate fecha, LocalTime hora, Cliente cliente, TipoServicio tipoServicio, boolean confirmada) {
+    public Cita(LocalDate fecha, LocalTime hora, Cliente cliente, TipoServicio tipoServicio) {
         this.fecha = fecha;
         this.hora = hora;
         this.cliente = cliente;
         this.tipoServicio = tipoServicio;
-        this.confirmada = confirmada;
+        this.confirmada = false;
     }
 
     public LocalDate getFecha() {

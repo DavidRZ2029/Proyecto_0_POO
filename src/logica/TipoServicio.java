@@ -1,6 +1,8 @@
 package logica;
 
-public class TipoServicio {
+import java.io.Serializable;
+
+public class TipoServicio implements Serializable{
     private String descripcion;
 
     public TipoServicio(String descripcion) {

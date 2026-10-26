@@ -1,12 +1,13 @@
 package logica;
 
+import java.io.Serializable;
 import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.HashMap;
 import java.util.Map;
 
-public class HorarioAtencion {
+public class HorarioAtencion implements Serializable{
     private Map<DayOfWeek, RangoHorario> horariosPorDia;
 
     public static class RangoHorario {

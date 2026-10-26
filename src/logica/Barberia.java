@@ -3,8 +3,9 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.io.Serializable;
 
-public class Barberia {
+public class Barberia implements Serializable{
     private List<Cliente> clientes;
     private List<Cita> citas;
     private List<TipoServicio> tiposServicio;

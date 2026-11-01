@@ -1,0 +1,37 @@
+package control;
+
+import logica.Cita;
+import logica.Cliente;
+import logica.TipoServicio;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.util.List;
+
+public class ControladorCitas {
+    
+    private ControladorBarberia controlPrincipal;
+
+    public ControladorCitas(ControladorBarberia controlPrincipal) {
+        this.controlPrincipal = controlPrincipal;
+    }
+
+    public boolean programarCita(LocalDate fecha, LocalTime hora, Cliente cliente, TipoServicio servicio) {
+        return controlPrincipal.getBarberia().crearCita(fecha, hora, cliente, servicio);
+    }
+
+    public void eliminarCita(Cita cita) {
+        controlPrincipal.getBarberia().borrarCita(cita);
+    }
+
+    public void confirmarAsistencia(Cita cita) {
+        controlPrincipal.getBarberia().confirmarCita(cita);
+    }
+
+    public List<Cita> obtenerCitasParaEnviarNotificaciones() {
+        return controlPrincipal.getBarberia().obtenerCitasParaNotificar();
+    }
+
+    public List<Cita> consultarCalendario(LocalDate fechaInicio, String vista) {
+        return controlPrincipal.getBarberia().verCalendario(fechaInicio, vista);
+    }
+}

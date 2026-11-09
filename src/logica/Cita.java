@@ -62,4 +62,9 @@ public class Cita implements Serializable{
     public void confirmar() {
         this.confirmada = true;
     }
+
+    @Override
+    public String toString() {
+        return "Cita para " + cliente.getNombre() + " - " + tipoServicio.getDescripcion() + " (" + fecha + ")";
+    }
 }

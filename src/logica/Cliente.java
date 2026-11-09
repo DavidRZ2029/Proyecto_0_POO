@@ -84,4 +84,10 @@ public class Cliente implements Serializable{
 
         return true;
     }
+
+
+    @Override
+    public String toString() {
+        return nombre + " (Tel: " + telefono + ")";
+    }
 }

@@ -10,7 +10,7 @@ import java.util.Map;
 public class HorarioAtencion implements Serializable{
     private Map<DayOfWeek, RangoHorario> horariosPorDia;
 
-    public static class RangoHorario {
+    public static class RangoHorario implements Serializable{
         private LocalTime inicio;
         private LocalTime fin;
 

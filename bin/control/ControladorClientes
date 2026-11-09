@@ -1,0 +1,28 @@
+package control;
+
+import logica.Cliente;
+
+public class ControladorClientes {
+    
+    private ControladorBarberia controlPrincipal;
+
+    public ControladorClientes(ControladorBarberia controlPrincipal) {
+        this.controlPrincipal = controlPrincipal;
+    }
+
+    public boolean registrarCliente(String nombre, String email, String telefono) {
+        return controlPrincipal.getBarberia().crearCliente(nombre, email, telefono);
+    }
+
+    public boolean actualizarCliente(String emailActual, String nuevoNombre, String nuevoEmail, String nuevoTel) {
+        return controlPrincipal.getBarberia().modificarCliente(emailActual, nuevoNombre, nuevoEmail, nuevoTel);
+    }
+
+    public boolean eliminarCliente(String email) {
+        return controlPrincipal.getBarberia().borrarCliente(email);
+    }
+
+    public Cliente buscarCliente(String email) {
+        return controlPrincipal.getBarberia().consultarCliente(email);
+    }
+}
